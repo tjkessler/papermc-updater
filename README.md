@@ -1,7 +1,7 @@
 # papermc-updater
 
 [![GitHub version](https://badge.fury.io/gh/tjkessler%2Fpapermc-updater.svg)](https://badge.fury.io/gh/tjkessler%2Fpapermc-updater)
-[![PyPI version](https://badge.fury.io/py/plemmy.svg)](https://badge.fury.io/py/papermc-updater)
+[![PyPI version](https://badge.fury.io/py/papermc-updater.svg)](https://badge.fury.io/py/papermc-updater)
 [![GitHub license](https://img.shields.io/badge/license-Apache-blue.svg)](https://raw.githubusercontent.com/tjkessler/papermc-updater/master/LICENSE.txt)
 
 A command-line tool to update a PaperMC server .jar file (in-place) to the latest build. Supports latest and previous MC versions.
