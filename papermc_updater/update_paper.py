@@ -5,7 +5,7 @@ from sys import argv
 import urllib.request
 import urllib.error
 
-MC_VERSION = "1.20.1"
+MC_VERSION = "1.20.2"
 
 
 def parse_args() -> dict:

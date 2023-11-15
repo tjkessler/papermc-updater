@@ -40,7 +40,7 @@ Warning: this tool replaces the existing PaperMC server .jar file!
 $ update-papermc $PATH_TO_EXISTING_JARFILE
 ```
 
-The default MC version is `1.20.1` - specify a different MC version with:
+The default MC version is `1.20.2` - specify a different MC version with:
 
 ```
 $ update-papermc $PATH_TO_EXISTING_JARFILE --version 1.19.4
