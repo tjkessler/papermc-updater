@@ -5,8 +5,6 @@ from sys import argv
 import urllib.request
 import urllib.error
 
-MC_VERSION = "1.20.2"
-
 
 def parse_args() -> dict:
     """ parse_args: parse command line arguments in form:
@@ -29,10 +27,28 @@ def parse_args() -> dict:
     ap.add_argument(
         "--version",
         type=str,
-        default=MC_VERSION,
-        help=f"MC version (default: {MC_VERSION})"
+        default=get_latest_mc_version(),
+        help=f"MC version (default: {get_latest_mc_version()})"
     )
     return vars(ap.parse_args(argv[1:]))
+
+
+def get_latest_mc_version() -> str:
+    """ get_latest_mc_version: obtain the latest MC version (stable)
+
+    Args:
+        None
+
+    Returns:
+        str: latest MC version (e.g., "1.20.2")
+    """
+
+    response = urllib.request.urlopen(
+        f"https://api.papermc.io/v2/projects/paper/"
+    )
+    content = json.loads(response.read().decode("utf-8"))
+    latest_version = content["versions"][-1]
+    return latest_version
 
 
 def get_latest_paper_build(version: str) -> int:
