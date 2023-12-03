@@ -40,7 +40,7 @@ Warning: this tool replaces the existing PaperMC server .jar file!
 $ update-papermc $PATH_TO_EXISTING_JARFILE
 ```
 
-The default MC version is `1.20.2` - specify a different MC version with:
+The default MC version is the latest stable release - specify a different MC version with:
 
 ```
 $ update-papermc $PATH_TO_EXISTING_JARFILE --version 1.19.4
@@ -51,5 +51,6 @@ $ update-papermc $PATH_TO_EXISTING_JARFILE --version 1.19.4
 ```python
 from papermc_updater import update_paper_to_latest
 
-update_paper_to_latest("$PATH_TO_EXISTING_JARFILE", version="1.20.1")
+update_paper_to_latest("$PATH_TO_EXISTING_JARFILE")  # latest stable release
+update_paper_to_latest("$PATH_TO_EXISTING_JARFILE", version="1.19.4")
 ```
